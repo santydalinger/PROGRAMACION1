@@ -1,5 +1,7 @@
 export default class Cliente{
     constructor(nombre,apellido,dni){
+
+        //recibo parametros
         this.nombre=nombre
         this.apellido=apellido
         this.dni=dni
