@@ -1,7 +1,8 @@
 export default class Producto{
     constructor() { }
+    opcion;
     async mostrar_dato_producto() {
-        const producto = await fetch('https://fakestoreapi.com/products')
+        const producto = await fetch(this.opcion)
         const carta_producto = await producto.json()
         let columnas = []
         carta_producto.forEach((element) => {
@@ -17,7 +18,8 @@ export default class Producto{
                     </div>
                 </div>
             `
-            columnas.push(columna)
+            columnas.push(columna
+                )
         });
         document.getElementById("row1").innerHTML = columnas.join("")
     }
